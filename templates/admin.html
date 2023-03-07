@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+    <div>
+    <h1> Welcome to admin page </h1>
+        {{admin}}
+        {% for k in admin %}
+            <p> {{k}}: {{admin[k]}}</p>
+        {% endfor %}
+    <button class="btn btn-primary"> Click me </button>
+        </div>
+{% endblock %}

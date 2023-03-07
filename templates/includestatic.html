@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/mystyle.css') }}">
+    <div>
+    <h1> Static file loadded  </h1>
+        <img src="{{url_for('static', filename='images/img3.png')}}">
+    <a class="btn btn-primary" href="{{url_for('homepage')}}" > Click me back to home page  </a>
+        </div>
+
+   <a class="btn btn-primary" href="{{url_for('home', username='noha')}}" > Goto home  </a>
+        </div>
+{% endblock %}

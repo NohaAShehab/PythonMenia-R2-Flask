@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/mystyle.css') }}">
+    <div>
+
+        <h1> All students</h1>
+         {% for std in students %}
+            <li> {{std}}</li>
+        {% endfor %}
+
+         <h1> All Courses</h1>
+         {% for c in courses %}
+            <li> {{c}}</li>
+        {% endfor %}
+
+        <h1> ================================================</h1>
+        <h1> Import macro </h1>
+        {% import 'macros.html' as mm %}
+
+        <h1> ================================================</h1>
+
+        <h1> Use Macros  with students </h1>
+        {{mm.render_list_tuple(students)}}
+
+         {{mm.saywelcome()}}
+    </div>
+{% endblock %}

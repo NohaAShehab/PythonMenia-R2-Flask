@@ -1,0 +1,11 @@
+{% macro render_list_tuple(list) %}
+    {% for item in list %}
+        <li style="color: darkmagenta"> {{item}}</li>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro saywelcome() %}
+    <h1> Welcome to my website </h1>
+    <a href="{{url_for('mystaticpage')}}" class="btn btn-success">Goto static files </a>
+{% endmacro %}
